@@ -1,0 +1,14 @@
+// import Font Awesome and Google font(s)
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+// override Bootstrap variables (before importing Bootstrap!!!)
+@import "variables";
+
+// import Bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// custom code/partials
+@import "reboot";
+

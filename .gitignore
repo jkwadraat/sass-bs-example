@@ -1,0 +1,6 @@
+.DS_Store
+.idea
+node_modules
+dist/js/bootstrap.bundle.min.js
+dist/js/jquery.min.js
+dist/css
