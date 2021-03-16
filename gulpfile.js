@@ -5,8 +5,7 @@ const browserSync = require('browser-sync').create();
 const plumber = require('gulp-plumber');
 const notify = require('gulp-notify');
 const newer = require('gulp-newer');
-const sass = require('gulp-sass');
-sass.compiler = require('sass');
+const sass = require('gulp-dart-sass');
 const prefix = require('gulp-autoprefixer');
 const sourcemaps = require('gulp-sourcemaps');
 const postcss = require('gulp-postcss');
@@ -37,7 +36,7 @@ gulp.task('sass', () => {
         )
         .pipe(sourcemaps.init())
         // outputStyle: expanded or compressed
-        .pipe(sass.sync({outputStyle: 'expanded'}).on('error', sass.logError))
+        .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
         .pipe(prefix('last 2 versions'))
         .pipe(postcss(processors))
         .pipe(sourcemaps.write())
